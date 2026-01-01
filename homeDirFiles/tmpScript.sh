@@ -1,4 +1,4 @@
-lib=$(ls -a ~/ | grep -E "rc|zsh" | tr  '\n' ' ')
+lib=$(ls -a ~/ | grep -E "rc|zsh" | grep "^\." | tr  '\n' ' ')
 for obj in $lib; do
 	mkdir -p ~/homeDirFilesBackup
 	if ! [[ -L "$HOME/$obj" ]]; then 
