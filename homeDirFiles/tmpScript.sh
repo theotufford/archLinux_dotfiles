@@ -1,4 +1,13 @@
-for obj in $(ls -a ./ | grep 'rc|zsh' | tr  '\n' ' '); do
-	rm  ~/$obj
-	ln ~/.config/homeDirFiles/$obj -s ~/$obj
+lib=$(ls -a ~/ | grep -E "rc|zsh" | tr  '\n' ' ')
+for obj in $lib; do
+	mkdir -p ~/homeDirFilesBackup
+	if ! [[ -L "$HOME/$obj" ]]; then 
+	echo "moving $obj to internal folder"
+	cp ~/$obj ~/homeDirFilesBackup/
+	mv ~/$obj ./$obj 
+	else 
+	echo "ensuring origin of $obj"
+		rm ~/$obj || rm -rf 
+	fi
+	ln -sf ~/.config/homeDirFiles/$obj ~/$obj
 done
