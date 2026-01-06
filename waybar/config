@@ -26,6 +26,22 @@
     "sway/mode": {
         "format": "<span style=\"italic\">{}</span>"
     },
+	"custom/timer": {
+    "exec": "$HOME/.config/waybar/scripts/waybar_timer hook",
+    "exec-on-event": false,
+    "return-type": "json",
+    "format": "{icon} {0}",
+    "format-icons": {
+        "standby": "STANDBY",
+        "running": "RUNNING",
+        "paused": "PAUSE"
+    },
+    "on-click": "$HOME/.config/waybar/scripts/waybar_timer new 25 'notify-send \"Session finished\"'",
+    "on-click-middle": "$HOME/.config/waybar/scripts/waybar_timer cancel",
+    "on-click-right": "$HOME/.config/waybar/scripts/waybar_timer togglepause",
+    "on-scroll-up": "$HOME/.config/waybar/scripts/waybar_timer increase 60 || $HOME/.config/waybar/scripts/waybar_timer new 1 'notify-send -u critical \"Timer expired\"'",
+    "on-scroll-down": "$HOME/.config/waybar/scripts/waybar_timer decrease 60"
+},
     "tray": {
         // "icon-size": 21,
         "spacing": 10

@@ -86,11 +86,15 @@ function pack.setup()
 	}
 
 	-- C / C++ (Pi-Pico)
+	local picoPath = os.getenv("PICO_SDK_PATH")
 	lspconfig.clangd = {
 		on_attach = onAttach,
 		cmd = { "clangd",
-			"--background-index",
-			"--compile-commands-dir=build"
+			--"--background-index",
+			"--compile-commands-dir=build",
+--			"--query-driver=/usr/bin/g++",
+			"--query-driver=" .. picoPath
+
 		},
 	}
 	-- treesitter settings ---------------------------------------------------------
