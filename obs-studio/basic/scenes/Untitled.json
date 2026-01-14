@@ -6,7 +6,7 @@
         "id": "pulse_output_capture",
         "versioned_id": "pulse_output_capture",
         "settings": {
-            "device_id": "default"
+            "device_id": "alsa_output.usb-Audient_EVO4-00.analog-surround-40.monitor"
         },
         "mixers": 255,
         "sync": 0,
@@ -217,7 +217,7 @@
     "transition_duration": 300,
     "preview_locked": false,
     "scaling_enabled": false,
-    "scaling_level": -41,
+    "scaling_level": -7,
     "scaling_off_x": 0.0,
     "scaling_off_y": 0.0,
     "modules": {

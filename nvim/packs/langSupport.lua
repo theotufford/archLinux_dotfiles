@@ -26,7 +26,7 @@ function pack.setup()
 			"lua_ls",
 			"svelte",
 			"vale_ls",
-			"pyright",
+			"pylsp",
 			"eslint",
 			"html",
 			"cssls",
@@ -55,7 +55,7 @@ function pack.setup()
 	}
 
 	-- Python
-	lspconfig.pyright = {
+	lspconfig.pylsp= {
 		on_attach = onAttach,
 	}
 
