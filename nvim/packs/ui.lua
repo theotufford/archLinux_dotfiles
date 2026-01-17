@@ -1,33 +1,40 @@
 local mod = {}
 function mod.add()
-	vim.pack.add({
-		{ src = "https://github.com/EdenEast/nightfox.nvim" },
-		{ src = "https://github.com/echasnovski/mini.pick" },
-		{ src = "https://github.com/nvim-telescope/telescope.nvim"},
-		{ src = "https://github.com/stevearc/oil.nvim" },
-	})
+  vim.pack.add({
+    { src = "https://github.com/EdenEast/nightfox.nvim" },
+    { src = "https://github.com/echasnovski/mini.pick" },
+    { src = "https://github.com/nvim-telescope/telescope.nvim" },
+    { src = "https://github.com/stevearc/oil.nvim" },
+    { src = "https://github.com/ribru17/bamboo.nvim" },
+    -- { src = "https://github.com/mcauley-penney/techbase.nvim" }
+  })
 end
 
 function mod.setup()
+  -- require("statusline")
+  require('bamboo').setup {
+    higlights = {
+      MiniPickNormal = {fg = '#FFFFFF'}
+    }
+  }
+  vim.cmd("colorscheme bamboo")
+  require "mini.pick".setup()
+  require "oil".setup()
 
-	vim.cmd("colorscheme carbonfox")
 
-	require "mini.pick".setup()
-	require "oil".setup()
+  vim.keymap.set('n', "<leader><leader>", ":Pick files<CR>")
+  vim.keymap.set('n', "<leader>e", ":Oil<CR>")
 
-	vim.keymap.set('n', "<leader><leader>", ":Pick files<CR>")
-	vim.keymap.set('n', "<leader>e", ":Oil<CR>")
+  vim.keymap.set('n', "<leader>h", ":Pick help<CR>")
+  vim.keymap.set('n', "<leader>H", vim.lsp.buf.hover)
 
-	vim.keymap.set('n', "<leader>h", ":Pick help<CR>")
-	vim.keymap.set('n', "<leader>H",  vim.lsp.buf.hover)
-
-	local builtin = require('telescope.builtin')
-	vim.keymap.set(
-		'n',
-		'<leader>g',
-		builtin.live_grep,
-		{ desc = 'Telescope live grep' }
-	)
+  local builtin = require('telescope.builtin')
+  vim.keymap.set(
+    'n',
+    '<leader>g',
+    builtin.live_grep,
+    { desc = 'Telescope live grep' }
+  )
 end
 
 return mod

@@ -9,6 +9,10 @@
       "rev": "9f21d6c7c16ccafdbd2d99f632a80c743c2a715a",
       "src": "https://github.com/R-nvim/R.nvim"
     },
+    "bamboo.nvim": {
+      "rev": "1309bc88bffcf1bedc3e84e7fa9004de93da774a",
+      "src": "https://github.com/ribru17/bamboo.nvim"
+    },
     "blink.cmp": {
       "rev": "b19413d214068f316c78978b08264ed1c41830ec",
       "src": "https://github.com/Saghen/blink.cmp"
@@ -68,6 +72,10 @@
     "remote-sshfs.nvim": {
       "rev": "45502b3892774811153aeab5f7f9b0033c82005c",
       "src": "https://github.com/nosduco/remote-sshfs.nvim"
+    },
+    "techbase.nvim": {
+      "rev": "25f814c3eba43f13d8f62d526434d7ba125e6add",
+      "src": "https://github.com/mcauley-penney/techbase.nvim"
     },
     "telescope.nvim": {
       "rev": "83a3a713d6b2d2a408491a1b959e55a7fa8678e8",

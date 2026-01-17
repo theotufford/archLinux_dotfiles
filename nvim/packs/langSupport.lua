@@ -23,14 +23,12 @@ function pack.setup()
 	require "r".setup()
 	require("mason-lspconfig").setup({
 		ensure_installed = {
-			"lua_ls",
-			"svelte",
-			"vale_ls",
+			"bashls",
 			"pylsp",
-			"eslint",
-			"html",
-			"cssls",
+			"harper_ls",
+			"svelte",
 			"clangd",
+			"lua_ls"
 		}
 	})
 	-- LSP settings ---------------------------------------------------------
@@ -42,9 +40,8 @@ function pack.setup()
 		vim.keymap.set("n", "K", vim.lsp.buf.hover, opts)
 		vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, opts)
 	end
-
 	-- Lua (for Neovim)
-	lspconfig.lua_ls = {
+	lspconfig['lua_ls'] = {
 		on_attach = onAttach,
 		settings = {
 			Lua = {
@@ -53,46 +50,29 @@ function pack.setup()
 			},
 		}
 	}
-
+	vim.lsp.enable('lua_ls')
 	-- Python
-	lspconfig.pylsp= {
-		on_attach = onAttach,
+	lspconfig[ 'harper_ls' ] = {
+		on_attach = onAttach
 	}
+	vim.lsp.enable('harper_ls')
 
-	-- R, broken for some reason
-	--	lspconfig.r_language_server.setup({
-	--		on_attach = onAttach,
-	--	})
-
-	-- JavaScript / React / TypeScript
-	lspconfig.eslint = {
-		on_attach = onAttach,
+	lspconfig['svelte']= {
+		on_attach = onAttach
 	}
-	lspconfig.vale_ls.setup = {
-		on_attach = onAttach,
+	vim.lsp.enable('svelte')
+	lspconfig['bashls'] = {
+		on_attach = onAttach
 	}
-	lspconfig.svelte = {
-		on_attach = onAttach,
-	}
-
-	-- HTML
-	lspconfig.html = {
-		on_attach = onAttach,
-	}
-
-	-- CSS
-	lspconfig.cssls = {
-		on_attach = onAttach,
-	}
-
+	vim.lsp.enable('bashls')
 	-- C / C++ (Pi-Pico)
 	local picoPath = os.getenv("PICO_SDK_PATH")
-	lspconfig.clangd = {
+	lspconfig['clangd'] = {
 		on_attach = onAttach,
 		cmd = { "clangd",
 			--"--background-index",
 			"--compile-commands-dir=build",
---			"--query-driver=/usr/bin/g++",
+			--			"--query-driver=/usr/bin/g++",
 			"--query-driver=" .. picoPath
 
 		},

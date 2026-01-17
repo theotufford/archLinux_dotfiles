@@ -2,9 +2,9 @@ export PATH="$HOME/bin:$HOME/.local/bin:/usr/local/bin:$HOME/.local/share/bob/ni
 export ZSH="$HOME/.oh-my-zsh"
 ZSH_THEME="robbyrussell"
 alias nv="nvim ."
-alias cds='dir="$(find . -type d | fzf)"; cd $dir'
+alias pr='cd $( find $HOME/projects/ -type d | fzf --height 30% --layout reverse)'
+alias cfg='cd $( find $HOME/.config/ -type d | fzf --height 30% --layout reverse)'
 alias nvs='dir="$(find . -type f | fzf)"; nvim $dir'
-alias hs=" history | fzf "
 alias gs="git status"
 alias gpush="git push -u origin main"
 alias cl="clear"

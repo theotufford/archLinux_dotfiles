@@ -27,12 +27,10 @@ function mod.setup()
 		},
 		fuzzy = { implementation = "lua" },
 		keymap = {
-			['<C-space>'] = { 'show', 'show_documentation', 'hide_documentation' },
+			['<S-Tab>'] = { 'show', 'show_documentation', 'hide_documentation' },
 			['<C-e>'] = { 'hide', 'fallback' },
 			['<CR>'] = { 'select_and_accept', 'fallback' },
 			--			['<CR>'] = { 'accept', function() return '\n' end },
-			['<Tab>'] = { 'snippet_forward', 'fallback' },
-			['<S-Tab>'] = { 'snippet_backward', 'fallback' },
 			['<Up>'] = { 'select_prev', 'fallback' },
 			['<Down>'] = { 'select_next', 'fallback' },
 		}
