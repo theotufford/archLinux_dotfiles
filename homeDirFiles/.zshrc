@@ -3,6 +3,7 @@ export ZSH="$HOME/.oh-my-zsh"
 ZSH_THEME="robbyrussell"
 alias nv="nvim ."
 alias pr='cd $( find $HOME/projects/ -type d | fzf --height 30% --layout reverse)'
+alias cds='cd $( find . -type d | fzf --height 30% --layout reverse)'
 alias cfg='cd $( find $HOME/.config/ -type d | fzf --height 30% --layout reverse)'
 alias nvs='dir="$(find . -type f | fzf)"; nvim $dir'
 alias gs="git status"
