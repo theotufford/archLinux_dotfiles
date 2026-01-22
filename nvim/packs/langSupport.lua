@@ -67,6 +67,7 @@ function pack.setup()
 	vim.lsp.enable('bashls')
 	-- C / C++ (Pi-Pico)
 	local picoPath = os.getenv("PICO_SDK_PATH")
+  if !(picoPath == nil) then
 	lspconfig['clangd'] = {
 		on_attach = onAttach,
 		cmd = { "clangd",
@@ -77,6 +78,13 @@ function pack.setup()
 
 		},
 	}
+  else
+	lspconfig['clangd'] = {
+		on_attach = onAttach
+	}
+  end
+  vim.lsp.enable('clangd')
+
 	-- treesitter settings ---------------------------------------------------------
 	require("nvim-treesitter.configs").setup({
 		auto_install = true,
