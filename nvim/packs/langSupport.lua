@@ -67,7 +67,7 @@ function pack.setup()
 	vim.lsp.enable('bashls')
 	-- C / C++ (Pi-Pico)
 	local picoPath = os.getenv("PICO_SDK_PATH")
-  if !(picoPath == nil) then
+  if (picoPath ~= nil) then
 	lspconfig['clangd'] = {
 		on_attach = onAttach,
 		cmd = { "clangd",
