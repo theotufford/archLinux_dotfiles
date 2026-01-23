@@ -12,11 +12,6 @@ end
 
 function mod.setup()
   -- require("statusline")
-  require('bamboo').setup {
-    higlights = {
-      MiniPickNormal = {fg = '#FFFFFF'}
-    }
-  }
   vim.cmd("colorscheme bamboo")
   require "mini.pick".setup()
   require "oil".setup()

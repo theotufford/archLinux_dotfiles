@@ -279,3 +279,5 @@ pacin dolphin
 clear
 firefox &
 exit
+clear
+start-hyprland
