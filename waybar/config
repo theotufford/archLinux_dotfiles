@@ -1,80 +1,42 @@
 {
-    "layer": "top", // Waybar at top layer
-    "position": "top", // Waybar at the bottom of your screen
-    "height": 24, // Waybar height
-    // "width": 1366, // Waybar width
-    // Choose the order of the modules
-    "modules-left": ["sway/workspaces", "sway/mode", ],
-    "modules-center": ["sway/window"],
-    "modules-right": ["pulseaudio", "network", "cpu", "memory", "tray", "clock"],
-    "sway/workspaces": {
-        "disable-scroll": true,
-        "all-outputs": false,
-        "format": "{icon}",
-        "format-icons": {
-            "1:web": "",
-            "2:code": "",
-            "3:term": "",
-            "4:work": "",
-            "5:music": "",
-            "6:docs": "",
-            "urgent": "",
-            "focused": "",
-            "default": ""
-        }
-    },
-    "sway/mode": {
-        "format": "<span style=\"italic\">{}</span>"
-    },
-	"custom/timer": {
-    "exec": "$HOME/.config/waybar/scripts/waybar_timer hook",
-    "exec-on-event": false,
-    "return-type": "json",
-    "format": "{icon} {0}",
-    "format-icons": {
-        "standby": "STANDBY",
-        "running": "RUNNING",
-        "paused": "PAUSE"
-    },
-    "on-click": "$HOME/.config/waybar/scripts/waybar_timer new 25 'notify-send \"Session finished\"'",
-    "on-click-middle": "$HOME/.config/waybar/scripts/waybar_timer cancel",
-    "on-click-right": "$HOME/.config/waybar/scripts/waybar_timer togglepause",
-    "on-scroll-up": "$HOME/.config/waybar/scripts/waybar_timer increase 60 || $HOME/.config/waybar/scripts/waybar_timer new 1 'notify-send -u critical \"Timer expired\"'",
-    "on-scroll-down": "$HOME/.config/waybar/scripts/waybar_timer decrease 60"
-},
-    "tray": {
-        // "icon-size": 21,
-        "spacing": 10
-    },
-    "clock": {
-        "format-alt": "{:%Y-%m-%d}"
-    },
-    "cpu": {
-        "format": "{usage}% "
-    },
-    "memory": {
-        "format": "{}% "
-    },
-    "network": {
-        // "interface": "wlp2s0", // (Optional) To force the use of this interface
-        "format-wifi": "{essid} ({signalStrength}%) ",
-        "format-ethernet": "{ifname}: {ipaddr}/{cidr} ",
-        "format-disconnected": "Disconnected ⚠"
-    },
-    "pulseaudio": {
-        //"scroll-step": 1,
-        "format": "{volume}% {icon}",
-        "format-bluetooth": "{volume}% {icon}",
-        "format-muted": "",
-        "format-icons": {
-            "headphones": "",
-            "handsfree": "",
-            "headset": "",
-            "phone": "",
-            "portable": "",
-            "car": "",
-            "default": ["", ""]
+        "layer": "top",
+        "modules-left": [
+                "sway/mode"
+        ],
+        "modules-center": [
+                "hyprland/workspaces"
+        ],
+        "modules-right": [
+                "battery",
+                "clock"
+        ],
+        "hyprland/workspaces": {
+                "format": "{icon}",
+                "on-click": "activate",
+                // Optional: show a specific number of persistent workspaces
+                "persistent-workspaces": {
+                        "*": 4 // e.g., 4 workspaces on all monitors
+                },
+                "format-icons": {
+                        "active": "◉",
+                        "default": "ⵔ",
+                        "urgent": "!",
+                        "focused": "●"
+                },
+                "all-outputs": true, // Show all workspaces on every bar
+                "sort-by": "number"
         },
-        "on-click": "pavucontrol"
-    }
+        "battery": {
+                "format": "{capacity}% {icon}",
+                "format-icons": [
+                        "",
+                        "",
+                        "",
+                        "",
+                        ""
+                ]
+        },
+        "clock": {
+                "format-alt": "{:%a, %d. %b  %H:%M}"
+        }
 }
