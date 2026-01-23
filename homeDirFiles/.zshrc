@@ -1,6 +1,6 @@
 export PATH="$HOME/bin:$HOME/.local/bin:/usr/local/bin:$HOME/.local/share/bob/nightly/bin/:$HOME/.local/share/nvim/mason/:$PATH"
 export ZSH="$HOME/.oh-my-zsh"
-ZSH_THEME="robbyrussell"
+ZSH_THEME="sonicradish"
 alias nv="nvim ."
 alias pr='cd $( find $HOME/projects/ -type d | fzf --height 30% --layout reverse)'
 alias cds='cd $( find . -type d | fzf --height 30% --layout reverse)'
