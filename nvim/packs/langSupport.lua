@@ -65,6 +65,7 @@ function pack.setup()
 		on_attach = onAttach
 	}
 	vim.lsp.enable('bashls')
+
 	-- C / C++ (Pi-Pico)
 	local picoPath = os.getenv("PICO_SDK_PATH")
   if (picoPath ~= nil) then
@@ -106,9 +107,6 @@ function pack.setup()
 		highlight = {
 			enable = true,
 			additional_vim_regex_highlighting = false,
-		},
-		indent = {
-			enable = true,
 		},
 		incremental_selection = {
 			enable = true,

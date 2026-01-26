@@ -13,18 +13,17 @@
         "hyprland/workspaces": {
                 "format": "{icon}",
                 "on-click": "activate",
-                // Optional: show a specific number of persistent workspaces
                 "persistent-workspaces": {
-                        "*": 4 // e.g., 4 workspaces on all monitors
+                        "*": [ 1,2,3,4 ]
                 },
                 "format-icons": {
-                        "active": "◉",
-                        "default": "ⵔ",
-                        "urgent": "!",
-                        "focused": "●"
+                        "4":"",
+                        "3":"",
+                        "2":"󰈹",
+                        "1":"",
                 },
-                "all-outputs": true, // Show all workspaces on every bar
-                "sort-by": "number"
+                "all-outputs": false, // Show all workspaces on every bar
+                "sort-by": "id"
         },
         "battery": {
                 "format": "{capacity}% {icon}",

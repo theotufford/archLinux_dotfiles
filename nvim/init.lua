@@ -1,24 +1,16 @@
-local o, opt = vim.o, vim.opt
+local o, opt = vim.opt, vim.opt
 vim.g.mapleader = " "
 o.omnifunc = ""
 o.number = true
 o.relativenumber = true
 o.tabstop = 2
+o.shiftwidth = 2
 o.softtabstop = 2
-o.breakindent = true
-o.breakindentopt = "list:-1"
-o.clipboard = "unnamedplus"
-o.colorcolumn = "+0"
-o.confirm = true
-opt.cursorlineopt = { "number" }
-opt.diffopt = {
-  "filler",
-  "indent-heuristic",
-  "linematch:60",
-  "vertical",
-}
-o.emoji = true
 o.expandtab = true
+o.autoindent = true
+o.clipboard = "unnamedplus"
+o.confirm = true
+o.emoji = true
 o.fileignorecase = true
 opt.fillchars = {
   eob = " ",
@@ -54,7 +46,6 @@ opt.listchars = {
 }
 o.signcolumn = "yes"
 o.smartcase = true
-o.softtabstop = -1
 o.synmaxcol = 1000
 o.termguicolors = true
 o.timeout = false
@@ -66,7 +57,7 @@ opt.viewoptions = {
   "cursor",
   "folds",
 }
-o.virtualedit = "all"
+-- o.virtualedit = "all"
 o.wildignore = "*.o"
 o.wildmode = "longest:full"
 o.wildoptions = "pum"
