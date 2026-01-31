@@ -2,6 +2,7 @@ export PATH="$HOME/bin:$HOME/.local/bin:/usr/local/bin:$HOME/.local/share/bob/ni
 export ZSH="$HOME/.oh-my-zsh"
 ZSH_THEME="sonicradish"
 alias nv="nvim ."
+alias qtest='g++ *.cpp -o test && ./test && rm test'
 alias pr='cd $( find $HOME/projects/ -type d | fzf --height 30% --layout reverse)'
 alias cds='cd $( find . -type d | fzf --height 30% --layout reverse)'
 alias cfg='cd $( find $HOME/.config/ -type d | fzf --height 30% --layout reverse)'

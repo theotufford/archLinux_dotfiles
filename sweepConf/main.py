@@ -67,42 +67,27 @@ XXXXXXX = KC.NO
 #                                           KC.LGUI, KC.BSPC,    SPC_L7,  KC.ENT,
 #                     ]]
 
-T_L1 = KC.LT(1, KC.T)
-N_L2 = KC.LT(2, KC.N)
-S_L3 = KC.LT(3, KC.S)
-E_L4 = KC.LT(4, KC.E)
-R_L5 = KC.LT(5, KC.R)
-I_L6 = KC.LT(6, KC.I)
-SPC_L7 = KC.LT(7, KC.SPC)
-L8_ESC = KC.LT(8, KC.ESC)
-A_SFT = KC.HT(KC.A, KC.LSFT)
-O_SFT = KC.HT(KC.O, KC.LSFT)
-Z_CTL = KC.HT(KC.Z, KC.LCTRL)
-SLSH_ALT = KC.HT(KC.SLSH, KC.LALT)
-QUOT_CTRL = KC.HT(KC.QUOT, KC.LCTRL)
+# monolithic thumb symbols layer 1: text / code
+#   left: period, comm, colon, quot, exclm, grv, ques, perc, DLR pound, at
+#   right: eq, mins, plus, star, pipe, underscore, circ, and, tilde, bslsh,
 
-keyboard.keymap += [[  # 0 COLEMAKDH
-                     KC.Q    ,KC.W    ,KC.F    ,KC.P    ,KC.B     ,KC.J    ,KC.L    ,KC.U    ,KC.Y     ,KC.TAB,
-                     A_SFT   ,R_L5    ,S_L3    ,T_L1    ,KC.G     ,KC.M    ,N_L2    ,E_L4    ,I_L6     ,O_SFT,
-                     Z_CTL   ,KC.X    ,KC.C    ,KC.D    ,KC.V     ,KC.K    ,KC.H    ,KC.SCLN ,QUOT_CTRL ,SLSH_ALT,
-                                                L8_ESC  ,KC.BSPC  ,SPC_L7  ,KC.ENT
-                     ]]
-# this is my c text ;//
+# numbers: all the numbers, dot, plus, min, star, eql, circ, underscr, slsh, parentheses
 
-keyboard.keymap += [[  # 1 RIGHT SYMBOLS
-                     KC.GRV, _______, KC.COLN,  _______, _______,     _______,  KC.POUND ,KC.AMPR, KC.TILDE, _______,
-                     KC.COLN, KC.COMM, KC.DOT,  ___x___, _______,     KC.PIPE,  KC.EQL   ,KC.EXLM, KC.AT,  KC.DQUO,
-                     _______, _______, _______, _______, _______,     _______,  KC.MINS, _______, _______, KC.BSLS,
-                                                _______, _______,     _______,  _______
-                     ]]
-
-keyboard.keymap += [[  # 2 LEFT SYMBOLS
-                     KC.RABK, KC.RCBR, KC.RBRC, KC.RPRN, _______,     _______,  _______, KC.EXLM, KC.GRV, _______,
-                     KC.LABK, KC.LCBR, KC.LBRC, KC.LPRN, _______,     _______,  ___x___, KC.DLR, KC.MINS, KC.QUES,
-                     KC.PERC, _______, KC.CIRC, KC.UNDS, _______,     _______,  _______, KC.AMPR, KC.EQL, KC.TILDE,
-                                                _______, _______,     _______, _______
-                     ]]
-
+c_in_dquo = KC.MACRO("ci\"")
+y_in_dquo = KC.MACRO("yi\"")
+d_in_dquo = KC.MACRO("di\"")
+y_in_quo = KC.MACRO("yi\'")
+c_in_quo = KC.MACRO("ci\'")
+d_in_quo = KC.MACRO("di\'")
+c_in_paren = KC.MACRO("ci(")
+y_in_paren = KC.MACRO("yi(")
+d_in_paren = KC.MACRO("di(")
+c_in_brc = KC.MACRO("ci[")
+y_in_brc = KC.MACRO("yi[")
+d_in_brc = KC.MACRO("di[")
+c_in_cbrc = KC.MACRO("ci{")
+y_in_cbrc = KC.MACRO("yi{")
+d_in_cbrc = KC.MACRO("di{")
 # vim window swapping
 winRight = KC.MACRO(
     Press(KC.LCTL),
@@ -110,18 +95,21 @@ winRight = KC.MACRO(
     Release(KC.LCTL),
     Tap(KC.RGHT)
 )
+
 winLeft = KC.MACRO(
     Press(KC.LCTL),
     Tap(KC.W),
     Release(KC.LCTL),
     Tap(KC.LEFT)
 )
-winDown= KC.MACRO(
+
+winDown = KC.MACRO(
     Press(KC.LCTL),
     Tap(KC.W),
     Release(KC.LCTL),
     Tap(KC.DOWN)
 )
+
 winUp = KC.MACRO(
     Press(KC.LCTL),
     Tap(KC.W),
@@ -129,47 +117,36 @@ winUp = KC.MACRO(
     Tap(KC.UP)
 )
 
-
-keyboard.keymap += [[  # 3 Navigation
-                     _______, _______, _______, _______, _______,     _______, winLeft, winDown, winUp, winRight,
-                     KC.N0,   KC.B,    ___x___, KC.E,    KC.DLR,      _______, KC.LEFT,  KC.DOWN, KC.UP, KC.RGHT, 
-                     _______, _______, _______, _______, _______,     _______, _______, _______, _______, _______,
-                                                _______, KC.LCTL,      KC.LSFT, _______
-                     ]]
-
-go_mark_A = KC.MACRO(
-    "`A"
-)
-set_mark_A = KC.MACRO(
-    "mA"
-)
-go_mark_B = KC.MACRO(
-    "`B"
-)
-set_mark_B = KC.MACRO(
-    "mB"
-)
-go_mark_C = KC.MACRO(
-    "`C"
-)
-set_mark_C = KC.MACRO(
-    "mC"
-)
-go_mark_D = KC.MACRO(
-    "`D"
-)
-set_mark_D = KC.MACRO(
-    "mD"
+vblok = KC.MACRO(
+    Press(KC.LCTL),
+    Tap(KC.V),
+    Release(KC.LCTL),
 )
 
-keyboard.keymap += [[  # 4 empty
-                     set_mark_A, set_mark_B, set_mark_C, set_mark_D, _______,     _______, _______, _______, _______, _______,
-                     go_mark_A, go_mark_B, go_mark_C, go_mark_D, _______,     _______, _______, ___x___, _______, _______,
-                     _______, _______, _______, _______, _______,     _______, _______, _______, _______, _______,
-                                                _______, _______,     _______, _______
-                     ]]
+v_split = KC.MACRO(
+    Press(KC.LCTL),
+    Tap(KC.W),
+    Release(KC.LCTL),
+    Tap(KC.V)
+)
 
-ext= KC.MACRO(
+cap_E = KC.LSFT(KC.E)
+cap_B = KC.LSFT(KC.B)
+
+go_mark_A = KC.MACRO("`A")
+set_mark_A = KC.MACRO("mA")
+
+go_mark_B = KC.MACRO("`B")
+set_mark_B = KC.MACRO("mB")
+
+go_mark_C = KC.MACRO("`C")
+set_mark_C = KC.MACRO("mC")
+
+
+search_replace = KC.MACRO("*:%s//")
+up_jlst = KC.LCTL(KC.O)
+down_jlst = KC.LCTL(KC.I)
+ext = KC.MACRO(
     Press(KC.LSFT),
     Tap(KC.E),
     Release(KC.LSFT)
@@ -187,33 +164,6 @@ sym = KC.MACRO(
 
 undo = KC.RCTRL(KC.Z)
 redo = KC.RCTRL(KC.Y)
-
-keyboard.keymap += [[  # 5 onshape layer
-                     _______, _______, KC.U,    KC.H,     undo,        _______, _______, _______, _______, _______,
-                     ext,     ___x___, KC.ENT,  KC.L,    sym,         _______, _______, _______, _______, _______,
-                     _______, _______, conc,    KC.I,    redo,        _______, _______, _______, _______, _______,
-                                                _______, _______,     _______, _______
-                     ]]
-
-
-replace_this = KC.MACRO(
-    "*:%s//"
-)
-
-
-
-keyboard.keymap += [[  #6 empty
-                     _______, _______, _______, _______, _______,     _______, _______, _______, _______, _______,
-                     _______, _______, _______, _______, _______,     _______, replace_this, _______, ___x___, _______,
-                     _______, _______, _______, _______, _______,     _______, _______, _______, _______, _______,
-                                                _______, _______,     _______, _______
-                     ]]
-keyboard.keymap += [[  # 7 NUMBERS
-                     KC.UNDS, KC.MINS, KC.ASTR, KC.DOT,  KC.E,       KC.D,   KC.LEFT,  KC.DOWN, KC.UP, KC.RGHT,
-                     KC.N1,   KC.N2,   KC.N3,   KC.N4,   KC.N5,      KC.N6,  KC.N7,    KC.N8,   KC.N9, KC.N0,
-                     KC.CIRC, KC.PLUS, KC.SLSH, KC.G, _______,   _______, _______, _______, _______, _______,
-                                                _______, _______,   ___x___, _______
-                     ]]
 
 modkey = KC.LALT
 fFox = modkey(KC.W)
@@ -233,19 +183,75 @@ hypr_w1 = modkey(KC.N1)
 hypr_w2 = modkey(KC.N2)
 hypr_w3 = modkey(KC.N3)
 hypr_w4 = modkey(KC.N4)
+hypr_w5 = modkey(KC.N5)
+hypr_w6 = modkey(KC.N6)
+hypr_w7 = modkey(KC.N7)
+hypr_w8 = modkey(KC.N8)
+
 rfrsh_bar = modkey(KC.LSFT(KC.R))
 
+SPC_L1 = KC.LT(1, KC.SPC)
+ENT_L2 = KC.LT(2, KC.ENT)
+S_L3 = KC.LT(3, KC.S)
+R_L4 = KC.LT(4, KC.R)
+BSPC_L5 = KC.LT(5, KC.BSPC)
+ESC_L6 = KC.LT(6, KC.ESC)
+A_SFT = KC.HT(KC.A, KC.LSFT)
+O_SFT = KC.HT(KC.O, KC.LSFT)
+Z_CTL = KC.HT(KC.Z, KC.LCTRL)
+X_ALT = KC.HT(KC.X, KC.LALT)
+SLSH_ALT = KC.HT(KC.SLSH, KC.LALT)
+DQUO_CTRL = KC.HT(KC.DQUO, KC.LCTRL)
 
-pushW1 = modkey(KC.LSFT(KC.N1))
-pushW2 = modkey(KC.LSFT(KC.N2))
-pushW3 = modkey(KC.LSFT(KC.N3))
-pushW4 = modkey(KC.LSFT(KC.N4))
+keyboard.keymap += [[  # 0 COLEMAKDH
+                     KC.Q  ,KC.W  ,KC.F  ,KC.P  ,KC.B    ,KC.J  ,KC.L    ,KC.U    ,KC.Y     ,KC.TAB,
+                     A_SFT ,R_L4  ,S_L3  ,KC.T  ,KC.G    ,KC.M  ,KC.N    ,KC.E    ,KC.I     ,O_SFT,
+                     Z_CTL ,X_ALT ,KC.C  ,KC.D  ,KC.V    ,KC.K  ,KC.H    ,KC.SCLN ,DQUO_CTRL ,SLSH_ALT,
+                                    ESC_L6   ,BSPC_L5    ,SPC_L1  ,ENT_L2
+                     ]]
 
-keyboard.keymap += [[  # 8 window management - hypr
-                     pushW4,  pushW3,  pushW2,  pushW1,  _______,      KC.ESC,  term,       fFox,    launcher,  yazi, 
-                     hypr_w1, hypr_w2, hypr_w3, hypr_w4, winfloat,     _______, hypr_left,  hypr_up, hypr_down, hypr_right, 
-                     rfrsh_bar, _______, _______, _______, _______,      _______, killWindow, _______, _______,   _______, 
-                                                ___x___, _______,      newfzf,newedit
+
+keyboard.keymap += [[  # 1 MAIN SYMBOLS
+                     KC.CIRC, KC.PLUS, KC.AMPR, KC.LCBR, KC.RCBR,     KC.DQUO, KC.AT,  KC.QUES, KC.QUOT,  KC.POUND,
+                     KC.UNDS, KC.ASTR, KC.EQL,  KC.LPRN, KC.RPRN,     KC.LABK, KC.DOT, KC.COMM, KC.COLN,   KC.MINS,
+                     KC.PERC, KC.DLR,  KC.PIPE, KC.LBRC, KC.RBRC,     KC.RABK, KC.EXLM,KC.TILDE,KC.GRV,    KC.BSLSH,
+                                                KC.F,    _______,     ___x___, _______
+                     ]]
+
+keyboard.keymap += [[  # 2 some vim editing
+                     y_in_cbrc, y_in_brc, y_in_paren, y_in_dquo,  y_in_quo,   _______, down_jlst,set_mark_A, set_mark_B, set_mark_C,
+                     c_in_cbrc, c_in_brc, c_in_paren, c_in_dquo,  c_in_quo,   _______, up_jlst,  go_mark_A,  go_mark_B,  go_mark_C,
+                     d_in_cbrc, d_in_brc, d_in_paren, d_in_dquo,  d_in_quo,   _______,_______, _______,_______,    _______,
+                                                      _______,     _______,   _______, ___x___
+                     ]]
+
+
+keyboard.keymap += [[  # 3 Navigation
+                     _______, KC.LPRN, _______, KC.RPRN, _______,     _______, winLeft, winDown, winUp, winRight,
+                     KC.N0,   cap_B,    ___x___, cap_E,  KC.DLR,      v_split, KC.LEFT,  KC.DOWN, KC.UP, KC.RGHT, 
+                     _______, _______, _______, vblok,   _______,     _______, _______, _______, _______, _______,
+                                                _______, KC.LCTL,      KC.LSFT, _______
+                     ]]
+
+keyboard.keymap += [[  # 4 onshape layer
+                     _______, _______, KC.U,    KC.H,     undo,       _______, _______, _______, _______, _______,
+                     ext,     ___x___, KC.ENT,  KC.L,    sym,         _______, _______, _______, _______, _______,
+                     _______, _______, conc,    KC.I,    redo,        _______, _______, _______, _______, _______,
+                                                _______, _______,     _______, _______
+                     ]]
+
+keyboard.keymap += [[  # 5 NUMBERS
+                     _______, _______, _______, _______, _______,   _______, _______, _______, _______, _______,
+                     KC.N1,   KC.N2,   KC.N3,   KC.N4,   KC.N5,     KC.N6,  KC.N7,   KC.N8,   KC.N9, KC.N0,
+                     _______, _______, _______, _______, _______,   _______, _______, _______, _______,
+                                                _______, ___x___,   _______, _______
+                     ]]
+
+keyboard.keymap += [[  # 6 window management - hypr
+                     hypr_w5, hypr_w6, hypr_w7, hypr_w8,   _______,    KC.ESC,  term,       fFox,    launcher,  yazi, 
+                     hypr_w1, hypr_w2, hypr_w3, hypr_w4,   _______,    KC.LSFT, hypr_left,  hypr_up, hypr_down, hypr_right, 
+                     rfrsh_bar, _______, _______, _______, _______,    _______, killWindow, _______, _______,   _______, 
+                                                ___x___,   _______,    newfzf,  newedit
                      ]]
 
 if __name__ == '__main__':
