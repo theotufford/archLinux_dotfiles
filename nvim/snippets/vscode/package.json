@@ -27,7 +27,8 @@
 			},
       {
 				"language": [
-					"json"
+					"json",
+					"jsonc"
 				],
 				"path": "./snippets/json.json"
 			},

@@ -204,20 +204,19 @@ SLSH_ALT = KC.HT(KC.SLSH, KC.LALT)
 DQUO_CTRL = KC.HT(KC.DQUO, KC.LCTRL)
 
 keyboard.keymap += [[  # 0 COLEMAKDH
-                     KC.Q    ,KC.W    ,KC.F    ,KC.P    ,KC.B     ,KC.J    ,KC.L    ,KC.U    ,KC.Y     ,KC.TAB,
-                     A_SFT   ,R_L4    ,S_L3    ,KC.T    ,KC.G     ,KC.M    ,KC.N    ,KC.E    ,KC.I     ,O_SFT,
-                     Z_CTL   ,X_ALT    ,KC.C    ,KC.D    ,KC.V     ,KC.K   ,KC.H    ,KC.SCLN ,DQUO_CTRL ,SLSH_ALT,
-                                                ESC_L6  ,BSPC_L5  ,SPC_L1  ,ENT_L2
+                     KC.Q  ,KC.W  ,KC.F  ,KC.P  ,KC.B    ,KC.J  ,KC.L    ,KC.U    ,KC.Y     ,KC.TAB,
+                     A_SFT ,R_L4  ,S_L3  ,KC.T  ,KC.G    ,KC.M  ,KC.N    ,KC.E    ,KC.I     ,O_SFT,
+                     Z_CTL ,X_ALT ,KC.C  ,KC.D  ,KC.V    ,KC.K  ,KC.H    ,KC.SCLN ,DQUO_CTRL ,SLSH_ALT,
+                                    ESC_L6   ,BSPC_L5    ,SPC_L1  ,ENT_L2
                      ]]
 
 
 keyboard.keymap += [[  # 1 MAIN SYMBOLS
                      KC.CIRC, KC.PLUS, KC.AMPR, KC.LCBR, KC.RCBR,     KC.DQUO, KC.AT,  KC.QUES, KC.QUOT,  KC.POUND,
                      KC.UNDS, KC.ASTR, KC.EQL,  KC.LPRN, KC.RPRN,     KC.LABK, KC.DOT, KC.COMM, KC.COLN,   KC.MINS,
-                     KC.PERC, KC.DLR,  KC.PIPE, KC.LBRC, KC.RBRC,     KC.RABK, KC.EXLM,KC.TILDE,KC.GRV,    KC.BLSH,
+                     KC.PERC, KC.DLR,  KC.PIPE, KC.LBRC, KC.RBRC,     KC.RABK, KC.EXLM,KC.TILDE,KC.GRV,    KC.BSLSH,
                                                 KC.F,    _______,     ___x___, _______
                      ]]
-
 
 keyboard.keymap += [[  # 2 some vim editing
                      y_in_cbrc, y_in_brc, y_in_paren, y_in_dquo,  y_in_quo,   _______, down_jlst,set_mark_A, set_mark_B, set_mark_C,

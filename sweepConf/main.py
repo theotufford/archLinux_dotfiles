@@ -214,7 +214,7 @@ keyboard.keymap += [[  # 0 COLEMAKDH
 keyboard.keymap += [[  # 1 MAIN SYMBOLS
                      KC.CIRC, KC.PLUS, KC.AMPR, KC.LCBR, KC.RCBR,     KC.DQUO, KC.AT,  KC.QUES, KC.QUOT,  KC.POUND,
                      KC.UNDS, KC.ASTR, KC.EQL,  KC.LPRN, KC.RPRN,     KC.LABK, KC.DOT, KC.COMM, KC.COLN,   KC.MINS,
-                     KC.PERC, KC.DLR,  KC.PIPE, KC.LBRC, KC.RBRC,     KC.RABK, KC.EXLM,KC.TILDE,KC.GRV,    KC.BSLSH,
+                     KC.PERC, KC.DLR,  KC.PIPE, KC.LBRC, KC.RBRC,     KC.RABK, KC.EXLM,KC.TILDE,KC.GRV,    KC.BSLS,
                                                 KC.F,    _______,     ___x___, _______
                      ]]
 

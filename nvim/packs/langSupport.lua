@@ -25,9 +25,9 @@ function pack.setup()
 		ensure_installed = {
 			"bashls",
 			"pylsp",
-			"harper_ls",
 			"svelte",
 			"clangd",
+			"biome",
 			"lua_ls"
 		}
 	})
@@ -40,6 +40,7 @@ function pack.setup()
 		vim.keymap.set("n", "K", vim.lsp.buf.hover, opts)
 		vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, opts)
 	end
+
 	-- Lua (for Neovim)
 	lspconfig['lua_ls'] = {
 		on_attach = onAttach,
@@ -51,16 +52,22 @@ function pack.setup()
 		}
 	}
 	vim.lsp.enable('lua_ls')
-	-- Python
-	lspconfig[ 'harper_ls' ] = {
+
+	lspconfig['pylsp']= {
 		on_attach = onAttach
 	}
-	vim.lsp.enable('harper_ls')
+	vim.lsp.enable('pylsp')
+
+	lspconfig['biome']= {
+		on_attach = onAttach
+	}
+	vim.lsp.enable('biome')
 
 	lspconfig['svelte']= {
 		on_attach = onAttach
 	}
 	vim.lsp.enable('svelte')
+
 	lspconfig['bashls'] = {
 		on_attach = onAttach
 	}
