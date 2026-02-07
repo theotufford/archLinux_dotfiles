@@ -132,6 +132,8 @@ v_split = KC.MACRO(
 
 cap_E = KC.LSFT(KC.E)
 cap_B = KC.LSFT(KC.B)
+visendl = KC.G(KC.DLR)
+visbegl = KC.G(KC.CIRC)
 
 go_mark_A = KC.MACRO("`A")
 set_mark_A = KC.MACRO("mA")
@@ -228,7 +230,7 @@ keyboard.keymap += [[  # 2 some vim editing
 
 keyboard.keymap += [[  # 3 Navigation
                      _______, KC.LPRN, _______, KC.RPRN, _______,     _______, winLeft, winDown, winUp, winRight,
-                     KC.N0,   cap_B,    ___x___, cap_E,  KC.DLR,      v_split, KC.LEFT,  KC.DOWN, KC.UP, KC.RGHT, 
+                     visbegl,   cap_B,    ___x___, cap_E,  visendl,      v_split, KC.LEFT,  KC.DOWN, KC.UP, KC.RGHT, 
                      _______, _______, _______, vblok,   _______,     _______, _______, _______, _______, _______,
                                                 _______, KC.LCTL,      KC.LSFT, _______
                      ]]

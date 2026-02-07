@@ -137,6 +137,10 @@ function pack.setup()
 		},
 	})
 	vim.keymap.set('n', "<leader>lf", vim.lsp.buf.format)
+
+	-- Manim binds ---------------------------------------------------------
+  vim.keymap.set("n", "<leader>tm", "<cmd>!manim -pqm --disable_caching --renderer=opengl main.py quick<cr>")
+
 end
 
 return pack
