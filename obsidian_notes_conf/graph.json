@@ -1,0 +1,37 @@
+{
+  "collapse-filter": false,
+  "search": "",
+  "showTags": false,
+  "showAttachments": false,
+  "hideUnresolved": false,
+  "showOrphans": true,
+  "collapse-color-groups": false,
+  "colorGroups": [
+    {
+      "query": "tag:#Calc_3  ",
+      "color": {
+        "a": 1,
+        "rgb": 14701138
+      }
+    },
+    {
+      "query": "tag:#Calc_4  ",
+      "color": {
+        "a": 1,
+        "rgb": 13395748
+      }
+    }
+  ],
+  "collapse-display": false,
+  "showArrow": false,
+  "textFadeMultiplier": -1.1,
+  "nodeSizeMultiplier": 1.40977508650519,
+  "lineSizeMultiplier": 3.57312932525952,
+  "collapse-forces": false,
+  "centerStrength": 0.660845588235294,
+  "repelStrength": 16.4381487889273,
+  "linkStrength": 0.670090830449827,
+  "linkDistance": 30,
+  "scale": 0.659142178203657,
+  "close": true
+}

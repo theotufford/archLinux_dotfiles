@@ -1,0 +1,244 @@
+{
+  "main": {
+    "id": "0ba359edeb49dece",
+    "type": "split",
+    "children": [
+      {
+        "id": "d79ae4723b0b09fc",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "291425ce9f313dc4",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "math/manim/Manim Notes.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Manim Notes"
+            }
+          },
+          {
+            "id": "4e4bdd9252258cf8",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "osculating circle.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "osculating circle"
+            }
+          }
+        ],
+        "currentTab": 1
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "106179d13e7160aa",
+    "type": "split",
+    "children": [
+      {
+        "id": "cef5f5859cc420ca",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "a4f988ff56b81f59",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "a2c9042f7a47940b",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "9d2612981a5e9a01",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "622e45f45d565458",
+    "type": "split",
+    "children": [
+      {
+        "id": "36dbc65e25f70479",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "569dc98e34dbfd7b",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "planes.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for planes"
+            }
+          },
+          {
+            "id": "463808cff55171d5",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links"
+            }
+          },
+          {
+            "id": "b43c628954655e05",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "f67e44f4c1de4525",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "All properties"
+            }
+          },
+          {
+            "id": "ac6409cf4134d3a5",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 200,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "audio-recorder:Start/stop recording": false,
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "bases:Create new base": false
+    }
+  },
+  "active": "4e4bdd9252258cf8",
+  "lastOpenFiles": [
+    "math/manim/Manim Notes.md",
+    "osculating circle.md",
+    "math/manim/Manim log.md",
+    "math/Differential Substitutions.md",
+    "Numerical approximation.md",
+    "math/Calc 4.md",
+    "linear equation.md",
+    "parametric surfaces.md",
+    "math/dot product.md",
+    "math/partial fractions.md",
+    "math/cross product.md",
+    "planes.md",
+    "lines in 3D.md",
+    "math/resources/line.png",
+    "math/Calc 3.md",
+    "Nice to have todos.md",
+    "math/resources/vecproj.png",
+    "math/vectors.md",
+    "Rough todo.md",
+    "Time_table app project.md",
+    "Initial Brainstorming.md",
+    "math/resources/quick_ManimCE_v0.19.2.gif",
+    "Project 1.md",
+    "C++.md",
+    "Untitled.base",
+    "ASCII game engine.md",
+    "math/Velocity Model Diffeq.md",
+    "math/stability and equilibrium of differential solutions.md",
+    "math/Population modeling diffeq examples.md",
+    "math/Linear Differential Equations.md",
+    "math/manim/quick.mp4",
+    "math/manim",
+    "math/resources/orthogonal def.png",
+    "math/resources/vector-addition-laws.png",
+    "math/resources/threevec.GIF",
+    "math/resources/vectors_intro.png",
+    "math/resources/ortho_vector_diff.png",
+    "math/resources",
+    "math/resources/vec_func_coord_sys.png",
+    "math",
+    "Hw Dump.base"
+  ]
+}
