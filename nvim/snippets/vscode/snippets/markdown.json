@@ -1,8 +1,54 @@
 {
-  "inline math block":{
-    "prefix":"mi",
-    "body":[
-      "$$1$"
+  "inline math block": {
+    "prefix": "dm",
+    "body": [
+      "$$",
+      "\\eqalign{",
+      "\t$1",
+      "}",
+      "$$"
+    ],
+    "luasnip": {
+      "autotrigger": true
+    }
+  },
+  "frac": {
+    "prefix": "\\fr",
+    "body": [
+      "\\frac{$1}{$2}"
+    ],
+    "luasnip": {
+      "autotrigger": true
+    }
+  },
+  "h1": {
+    "prefix": "h1",
+    "body": [
+      "#$1"
+    ]
+  },
+  "h2": {
+    "prefix": "h2",
+    "body": [
+      "##$1"
+    ]
+  },
+  "h3": {
+    "prefix": "h3",
+    "body": [
+      "###$1"
+    ]
+  },
+  "h4": {
+    "prefix": "h4",
+    "body": [
+      "####$1"
+    ]
+  },
+  "h5": {
+    "prefix": "h5",
+    "body": [
+      "#####$1"
     ]
   }
 }

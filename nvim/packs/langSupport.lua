@@ -28,7 +28,8 @@ function pack.setup()
 			"svelte",
 			"clangd",
 			"biome",
-			"lua_ls"
+			"lua_ls",
+      "tinymist"
 		}
 	})
 	-- LSP settings ---------------------------------------------------------
@@ -40,6 +41,12 @@ function pack.setup()
 		vim.keymap.set("n", "K", vim.lsp.buf.hover, opts)
 		vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, opts)
 	end
+
+	lspconfig['tinymist'] = {
+		on_attach = onAttach
+	}
+	vim.lsp.enable('tinymist')
+
 
 	-- Lua (for Neovim)
 	lspconfig['lua_ls'] = {
@@ -110,6 +117,7 @@ function pack.setup()
 			"bash",
 			"json",
 			"svelte",
+      "typst"
 		},
 		highlight = {
 			enable = true,

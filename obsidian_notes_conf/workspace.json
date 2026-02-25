@@ -4,39 +4,24 @@
     "type": "split",
     "children": [
       {
-        "id": "d79ae4723b0b09fc",
+        "id": "991aab3ad3d031a0",
         "type": "tabs",
         "children": [
           {
-            "id": "291425ce9f313dc4",
+            "id": "247a3337cbe60e38",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "math/manim/Manim Notes.md",
+                "file": "divisibility.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Manim Notes"
-            }
-          },
-          {
-            "id": "4e4bdd9252258cf8",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "osculating circle.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "osculating circle"
+              "title": "divisibility"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -56,7 +41,7 @@
               "type": "file-explorer",
               "state": {
                 "sortOrder": "alphabetical",
-                "autoReveal": false
+                "autoReveal": true
               },
               "icon": "lucide-folder-closed",
               "title": "Files"
@@ -88,12 +73,24 @@
               "icon": "lucide-bookmark",
               "title": "Bookmarks"
             }
+          },
+          {
+            "id": "aaa7d0b8ee2487dc",
+            "type": "leaf",
+            "state": {
+              "type": "typst-tools",
+              "state": {},
+              "icon": "typst-stroke",
+              "title": "Typst Tools"
+            }
           }
-        ]
+        ],
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 200,
+    "collapsed": true
   },
   "right": {
     "id": "622e45f45d565458",
@@ -197,47 +194,53 @@
       "bases:Create new base": false
     }
   },
-  "active": "4e4bdd9252258cf8",
+  "active": "247a3337cbe60e38",
   "lastOpenFiles": [
-    "math/manim/Manim Notes.md",
-    "osculating circle.md",
-    "math/manim/Manim log.md",
-    "math/Differential Substitutions.md",
-    "Numerical approximation.md",
-    "math/Calc 4.md",
-    "linear equation.md",
-    "parametric surfaces.md",
-    "math/dot product.md",
-    "math/partial fractions.md",
-    "math/cross product.md",
-    "planes.md",
-    "lines in 3D.md",
-    "math/resources/line.png",
-    "math/Calc 3.md",
-    "Nice to have todos.md",
-    "math/resources/vecproj.png",
-    "math/vectors.md",
-    "Rough todo.md",
-    "Time_table app project.md",
-    "Initial Brainstorming.md",
-    "math/resources/quick_ManimCE_v0.19.2.gif",
-    "Project 1.md",
-    "C++.md",
-    "Untitled.base",
+    "math/winning solutions.md",
+    "divisibility.md",
+    "math/divisibility.typ",
     "ASCII game engine.md",
     "math/Velocity Model Diffeq.md",
-    "math/stability and equilibrium of differential solutions.md",
-    "math/Population modeling diffeq examples.md",
-    "math/Linear Differential Equations.md",
+    "math/vectors.md",
+    "Untitled.base",
+    "math/dot product.md",
+    "math/Calc 3.md",
+    "math/partial derivatives.md",
+    "math/planes.md",
+    "limits_in_3d.md",
+    "math/Gaussian Elimination.md",
+    "partial derivatives.md",
+    "math/separable differential equations.md",
+    "math/determinants.md",
+    "math/higher order funcitons.md",
+    "math/limits in 3d.md",
+    "math/Matrices.md",
+    "Untitled 1.base",
+    "Recording 20260222153003.m4a",
+    "limits in 3d.md",
+    "math/resources/3dlimit.png",
+    "Rough todo.md",
+    "salt.md",
+    "Cooking.md",
+    "heat.md",
+    "acid.md",
+    "fat.md",
+    "Gaussian Elimination.md",
+    "oj crepes.md",
+    "math/resources/level_surface.png",
+    "math/resources/topo_map.png",
+    "math/resources/level_curves.png",
+    "math/resources/parallelpiped.png",
+    "math/resources/parallelogram.png",
+    "Recording 20260208141425.m4a",
+    "math/resources/line.png",
+    "Untitled.canvas",
+    "math/resources/vecproj.png",
+    "math/resources/quick_ManimCE_v0.19.2.gif",
     "math/manim/quick.mp4",
     "math/manim",
     "math/resources/orthogonal def.png",
-    "math/resources/vector-addition-laws.png",
-    "math/resources/threevec.GIF",
-    "math/resources/vectors_intro.png",
-    "math/resources/ortho_vector_diff.png",
     "math/resources",
-    "math/resources/vec_func_coord_sys.png",
     "math",
     "Hw Dump.base"
   ]

@@ -1,7 +1,7 @@
-@import '/home/theo/.config/wofi/gruvbox.css';
+@import '$HOME/.config/wofi/gruvbox.css';
 
 * {
-    font-family: 'Iosevka Nerd Font mono';
+    font-family: 'CodeNewRoman Nerd Font mono';
     font-size: 14px;
  }
 

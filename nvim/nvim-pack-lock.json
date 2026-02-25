@@ -9,6 +9,10 @@
       "rev": "9f21d6c7c16ccafdbd2d99f632a80c743c2a715a",
       "src": "https://github.com/R-nvim/R.nvim"
     },
+    "atone.nvim": {
+      "rev": "76c916cd6d700425c82f56e251ffb12185630c78",
+      "src": "https://github.com/XXiaoA/atone.nvim"
+    },
     "bamboo.nvim": {
       "rev": "1309bc88bffcf1bedc3e84e7fa9004de93da774a",
       "src": "https://github.com/ribru17/bamboo.nvim"
@@ -20,6 +24,10 @@
     "dressing.nvim": {
       "rev": "8e8f7e525941ee2080a39b98c1b1f5466a6ea187",
       "src": "https://github.com/akinsho/dressing.nvim"
+    },
+    "image.nvim": {
+      "rev": "da2be65c153ba15a14a342b05591652a6df70d58",
+      "src": "https://github.com/3rd/image.nvim"
     },
     "markdown-plus.nvim": {
       "rev": "41c8fa11906cab94ad384548caa7642b8b5a7942",
@@ -36,6 +44,10 @@
     "micropython.nvim": {
       "rev": "c1c7f5b4133391ff61b5ae87731caec6d77f377f",
       "src": "https://github.com/jim-at-jibba/micropython.nvim"
+    },
+    "mini.icons": {
+      "rev": "5b9076dae1bfbe47ba4a14bc8b967cde0ab5d77e",
+      "src": "https://github.com/nvim-mini/mini.icons"
     },
     "mini.pairs": {
       "rev": "b316e68f2d242d5bd010deaab645daa27ed86297",
@@ -61,6 +73,10 @@
       "rev": "42fc28ba918343ebfd5565147a42a26580579482",
       "src": "https://github.com/nvim-treesitter/nvim-treesitter"
     },
+    "obsidian.nvim": {
+      "rev": "14e0427bef6c55da0d63f9a313fd9941be3a2479",
+      "src": "https://github.com/epwalsh/obsidian.nvim"
+    },
     "oil.nvim": {
       "rev": "7e1cd7703ff2924d7038476dcbc04b950203b902",
       "src": "https://github.com/stevearc/oil.nvim"
@@ -73,6 +89,10 @@
       "rev": "45502b3892774811153aeab5f7f9b0033c82005c",
       "src": "https://github.com/nosduco/remote-sshfs.nvim"
     },
+    "render-markdown.nvim": {
+      "rev": "48b4175dbca8439d30c1f52231cbe5a712c8f9d9",
+      "src": "https://github.com/MeanderingProgrammer/render-markdown.nvim"
+    },
     "techbase.nvim": {
       "rev": "25f814c3eba43f13d8f62d526434d7ba125e6add",
       "src": "https://github.com/mcauley-penney/techbase.nvim"
@@ -84,6 +104,14 @@
     "toggleterm.nvim": {
       "rev": "9a88eae817ef395952e08650b3283726786fb5fb",
       "src": "https://github.com/akinsho/toggleterm.nvim"
+    },
+    "typst-preview.nvim": {
+      "rev": "bf5d5eaf23bbfcca9f98a24ed29bd084abf89bf2",
+      "src": "https://github.com/chomosuke/typst-preview.nvim"
+    },
+    "typst.vim": {
+      "rev": "1d5436c0f55490893892441c0eca55e6cdf4916c",
+      "src": "https://github.com/kaarmu/typst.vim"
     }
   }
 }

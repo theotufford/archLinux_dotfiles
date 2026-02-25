@@ -8,17 +8,10 @@
   "collapse-color-groups": false,
   "colorGroups": [
     {
-      "query": "tag:#Calc_3  ",
+      "query": "tag:#TODO  ",
       "color": {
         "a": 1,
-        "rgb": 14701138
-      }
-    },
-    {
-      "query": "tag:#Calc_4  ",
-      "color": {
-        "a": 1,
-        "rgb": 13395748
+        "rgb": 11657298
       }
     }
   ],
@@ -32,6 +25,6 @@
   "repelStrength": 16.4381487889273,
   "linkStrength": 0.670090830449827,
   "linkDistance": 30,
-  "scale": 0.659142178203657,
-  "close": true
+  "scale": 0.7100817607107969,
+  "close": false
 }
