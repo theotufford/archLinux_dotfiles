@@ -1,0 +1,12 @@
+# Use XF86AudioMute to mute volume
+"${HOME}/.config/homeDirFiles/volumectl.sh mute"
+   XF86AudioMute
+
+# Use XF86AudioRaiseVolume to raise volume
+"${HOME}/.config/homeDirFiles/volumectl.sh raise"
+   XF86AudioRaiseVolume
+
+# Use XF86AudioLowerVolume to lower volume
+"${HOME}/.config/homeDirFiles/volumectl.sh lower"
+   XF86AudioLowerVolume
+

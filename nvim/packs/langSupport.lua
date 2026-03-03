@@ -117,7 +117,8 @@ function pack.setup()
 			"bash",
 			"json",
 			"svelte",
-      "typst"
+      "typst",
+      "jsdoc"
 		},
 		highlight = {
 			enable = true,
