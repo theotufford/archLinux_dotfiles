@@ -18,9 +18,11 @@ function pack.add()
 end
 
 function pack.setup()
+
 	require "nvim-treesitter".setup()
 	require "mason".setup()
 	require "r".setup()
+
 	require("mason-lspconfig").setup({
 		ensure_installed = {
 			"bashls",
@@ -98,6 +100,7 @@ function pack.setup()
 		on_attach = onAttach
 	}
   end
+
   vim.lsp.enable('clangd')
 
 	-- treesitter settings ---------------------------------------------------------
@@ -118,7 +121,10 @@ function pack.setup()
 			"json",
 			"svelte",
       "typst",
-      "jsdoc"
+      "java",
+      "jsdoc",
+      "javadoc",
+
 		},
 		highlight = {
 			enable = true,

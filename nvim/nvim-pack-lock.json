@@ -21,6 +21,10 @@
       "rev": "b19413d214068f316c78978b08264ed1c41830ec",
       "src": "https://github.com/Saghen/blink.cmp"
     },
+    "cmake-tools.nvim": {
+      "rev": "906fd4816bf4d588162d5ec78830456f0d969c5f",
+      "src": "https://github.com/civitasv/cmake-tools.nvim"
+    },
     "dressing.nvim": {
       "rev": "8e8f7e525941ee2080a39b98c1b1f5466a6ea187",
       "src": "https://github.com/akinsho/dressing.nvim"

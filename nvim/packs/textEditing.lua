@@ -17,6 +17,7 @@ function mod.setup()
   local homedir = os.getenv('HOME')
 
   require("luasnip.loaders.from_vscode").load({ paths = { homedir .. "/.config/nvim/snippets/vscode" } })
+  require("luasnip.loaders.from_lua").load({ paths = { homedir .. "/.config/nvim/snippets/luasnip" } })
   vmp({ "i", "s" }, "<S-tab>", function() ls.jump(-1) end, { silent = true })
 
   -- autocomplete interface -------------------------------

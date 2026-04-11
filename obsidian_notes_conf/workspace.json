@@ -11,17 +11,30 @@
             "id": "247a3337cbe60e38",
             "type": "leaf",
             "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.12.7"
+              },
+              "icon": "lucide-book-up",
+              "title": "Release Notes 1.12.7"
+            }
+          },
+          {
+            "id": "4aee147706a169ad",
+            "type": "leaf",
+            "state": {
               "type": "markdown",
               "state": {
-                "file": "divisibility.md",
+                "file": "test.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "divisibility"
+              "title": "test"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -73,24 +86,13 @@
               "icon": "lucide-bookmark",
               "title": "Bookmarks"
             }
-          },
-          {
-            "id": "aaa7d0b8ee2487dc",
-            "type": "leaf",
-            "state": {
-              "type": "typst-tools",
-              "state": {},
-              "icon": "typst-stroke",
-              "title": "Typst Tools"
-            }
           }
         ],
-        "currentTab": 3
+        "currentTab": 2
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 200
   },
   "right": {
     "id": "622e45f45d565458",
@@ -194,8 +196,13 @@
       "bases:Create new base": false
     }
   },
-  "active": "247a3337cbe60e38",
+  "active": "4aee147706a169ad",
   "lastOpenFiles": [
+    "test.md",
+    "math/Calc 3.md",
+    "math/higher order funcitons.md",
+    "math/limits in 3d.md",
+    "Untitled 1.base",
     "math/winning solutions.md",
     "divisibility.md",
     "math/divisibility.typ",
@@ -204,7 +211,6 @@
     "math/vectors.md",
     "Untitled.base",
     "math/dot product.md",
-    "math/Calc 3.md",
     "math/partial derivatives.md",
     "math/planes.md",
     "limits_in_3d.md",
@@ -212,10 +218,7 @@
     "partial derivatives.md",
     "math/separable differential equations.md",
     "math/determinants.md",
-    "math/higher order funcitons.md",
-    "math/limits in 3d.md",
     "math/Matrices.md",
-    "Untitled 1.base",
     "Recording 20260222153003.m4a",
     "limits in 3d.md",
     "math/resources/3dlimit.png",
@@ -226,7 +229,6 @@
     "acid.md",
     "fat.md",
     "Gaussian Elimination.md",
-    "oj crepes.md",
     "math/resources/level_surface.png",
     "math/resources/topo_map.png",
     "math/resources/level_curves.png",

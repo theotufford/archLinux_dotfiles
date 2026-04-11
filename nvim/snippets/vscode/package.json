@@ -55,6 +55,12 @@
           "python"
         ],
         "path": "./snippets/python.json"
+      },
+      {
+        "language": [
+          "typst"
+        ],
+        "path": "./snippets/typ.json"
       }
 
 		]

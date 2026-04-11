@@ -1,0 +1,51 @@
+{
+  "math block": {
+    "prefix": "mt",
+    "body": [
+      "$",
+      "\t$1",
+      "$"
+    ],
+    "luasnip": {
+      "autotrigger": true
+    }
+  },
+  "chevron vector": {
+    "prefix": "cve",
+    "body": [
+      "chevron $1 chevron.r"
+    ],
+    "luasnip": {
+      "autotrigger": true
+    }
+  },
+  "inline math": {
+    "prefix": "dm",
+    "body": [
+      "$$1$ $2"
+    ],
+    "luasnip": {
+      "autotrigger": true
+    }
+  },
+  "negative 1 wrapped": {
+    "prefix": "ng1",
+    "body": [
+      "(-1)"
+    ],
+    "luasnip": {
+      "autotrigger": true
+    }
+  },
+  "multiline square bracket": {
+    "prefix": "mr",
+    "body": [
+      "[",
+      "\t$1",
+      "]"
+    ],
+    "luasnip": {
+      "autotrigger": true
+    }
+  }
+}

@@ -1,3 +1,5 @@
+[Added Associations]
+application/pdf=zathura-3.desktop;zathura-2.desktop;zathura.desktop;
 
 [Default Applications]
-application/pdf=org.pwmt.zathura.desktop
+application/pdf=zathura-3.desktop;
