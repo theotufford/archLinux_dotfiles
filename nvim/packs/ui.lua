@@ -7,16 +7,17 @@ function mod.add()
     { src = "https://github.com/nvim-telescope/telescope.nvim" },
     { src = "https://github.com/stevearc/oil.nvim" },
     { src = "https://github.com/ribru17/bamboo.nvim" },
-    -- { src = "https://github.com/mcauley-penney/techbase.nvim" }
+    { src = "https://github.com/mcauley-penney/techbase.nvim" }
   })
 end
 
 function mod.setup()
   -- require("statusline")
-  vim.cmd("colorscheme bamboo")
   require "mini.pick".setup()
   require "mini.icons".setup()
   require "oil".setup()
+  require "bamboo".setup()
+  vim.cmd("colorscheme bamboo-light")
 
 
   vim.keymap.set('n', "<leader><leader>", ":Pick files<CR>")

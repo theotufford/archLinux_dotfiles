@@ -26,16 +26,19 @@ function pack.setup()
 	require("mason-lspconfig").setup({
 		ensure_installed = {
 			"bashls",
+      "jsonls",
 			"pylsp",
 			"svelte",
+      "ts_ls",
 			"clangd",
-			"biome",
+			"eslint",
 			"lua_ls",
       "tinymist"
 		}
 	})
 	-- LSP settings ---------------------------------------------------------
 	local lspconfig = vim.lsp.config
+  local lspEnable = vim.lsp.enable
 	-- Common on_attach
 	local onAttach = function(_, bufnr)
 		local opts = { noremap = false, buffer = bufnr, silent = true }
@@ -43,11 +46,15 @@ function pack.setup()
 		vim.keymap.set("n", "K", vim.lsp.buf.hover, opts)
 		vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, opts)
 	end
+	lspconfig['jsonls'] = {
+		on_attach = onAttach
+	}
+	lspEnable('jsonls')
 
 	lspconfig['tinymist'] = {
 		on_attach = onAttach
 	}
-	vim.lsp.enable('tinymist')
+	lspEnable('tinymist')
 
 
 	-- Lua (for Neovim)
@@ -60,27 +67,33 @@ function pack.setup()
 			},
 		}
 	}
-	vim.lsp.enable('lua_ls')
+	lspEnable('lua_ls')
 
 	lspconfig['pylsp']= {
-		on_attach = onAttach
-	}
-	vim.lsp.enable('pylsp')
 
-	lspconfig['biome']= {
 		on_attach = onAttach
 	}
-	vim.lsp.enable('biome')
+	lspEnable('pylsp')
+
+	lspconfig['eslint']= {
+		on_attach = onAttach
+	}
+	lspEnable('eslint')
+
+	lspconfig['ts_ls']= {
+		on_attach = onAttach
+	}
+	lspEnable('ts_ls')
 
 	lspconfig['svelte']= {
 		on_attach = onAttach
 	}
-	vim.lsp.enable('svelte')
+	lspEnable('svelte')
 
 	lspconfig['bashls'] = {
 		on_attach = onAttach
 	}
-	vim.lsp.enable('bashls')
+	lspEnable('bashls')
 
 	-- C / C++ (Pi-Pico)
 	local picoPath = os.getenv("PICO_SDK_PATH")
@@ -101,7 +114,7 @@ function pack.setup()
 	}
   end
 
-  vim.lsp.enable('clangd')
+  lspEnable('clangd')
 
 	-- treesitter settings ---------------------------------------------------------
 	require("nvim-treesitter.configs").setup({
@@ -112,7 +125,7 @@ function pack.setup()
 			"python",
 			"r",
 			"javascript",
-			"tsx",
+			"typescript",
 			"html",
 			"css",
 			"c",

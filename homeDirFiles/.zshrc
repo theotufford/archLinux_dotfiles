@@ -20,5 +20,6 @@ source $ZSH/oh-my-zsh.sh
 
 eval "$(zoxide init zsh)"
 source $HOME/.bobrc.sh
+export PICO_SDK_PATH="$HOME/pico/pico-sdk/"
 
 

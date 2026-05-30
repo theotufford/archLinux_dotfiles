@@ -7,7 +7,6 @@ function mod.add()
     { src = "https://github.com/nosduco/remote-sshfs.nvim" },
   })
 end
-
 function mod.setup()
   local vmp = vim.keymap.set
 
@@ -24,7 +23,7 @@ function mod.setup()
   require("blink.cmp").setup({
     snippets = { preset = 'luasnip' },
     sources = {
-      default = { 'lsp', 'path', 'snippets', 'buffer' },
+      default = { 'snippets', 'lsp', 'path', 'buffer' },
     },
     fuzzy = { implementation = "lua" },
     keymap = {

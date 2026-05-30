@@ -5,21 +5,22 @@ function pack.add()
 end
 function pack.setup()
   local vimap = vim.keymap.set;
-	local opts = {}
+	local defaults = {}
 	local all = {"n", "v", "o"}
 
-	vimap(all, "<C-W><Left>", "<C-W>h", opts)
-	vimap(all, "<C-W><Down>", "<C-W>j", opts)
-	vimap(all, "<C-W><Up>", "<C-W>k", opts)
-	vimap(all, "<C-W><Right>", "<C-W>l", opts)
-	vimap(all, "\\", "<cmd>let @/ = \"\" <CR>", opts)
+  vimap('n', '<Tab>', '<Nop>', { noremap = true, silent = true })
 
-	vimap("n", "<leader>t", "*N:s///g<Left><Left>", opts)
-	vimap("n", "<leader>T", "*N:%s///g<Left><Left>", opts)
-	vimap("v", "t", 'y:s/"//g<Left><Left>', opts)
-	vimap("v", "T", 'y:%s/"//g<Left><Left>', opts)
+	vimap(all, "<C-W><Left>", "<C-W>h", defaults)
+	vimap(all, "<C-W><Down>", "<C-W>j", defaults)
+	vimap(all, "<C-W><Up>", "<C-W>k", defaults)
+	vimap(all, "<C-W><Right>", "<C-W>l", defaults)
+	vimap(all, "\\", "<cmd>let @/ = \"\" <CR>", defaults)
 
-  vimap("n", "s", "g;", opts)
+	vimap("n", "<leader>t", "*N:s///g<Left><Left>", defaults)
+	vimap("n", "<leader>T", "*N:%s///g<Left><Left>", defaults)
+	vimap("v", "t", 'y:s/"//g<Left><Left>', defaults)
+	vimap("v", "T", 'y:%s/"//g<Left><Left>', defaults)
+  vimap("n", "s", "g;", defaults)
 
 
 end
